@@ -1,0 +1,131 @@
+<!DOCTYPE html
+<html lang="de">
+<head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt-Website</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+<header>
+    <h1>FreeDrive</h1>
+</header>
+
+<nav>
+    <a onclick="showContent('overview')">Project Overview</a> <!-- Clicking this link will show the "overview" section -->
+    <a onclick="showContent('technik')">Die Technik</a>
+    <a onclick="showContent('code')">Der Code</a>
+    <a onclick="showContent('hindernisse')">Hindernisse und Probleme</a>
+    <a onclick="showContent('resultat')">Das Endergebnis</a>
+</nav>
+
+<section id="overview" style="display: none;"> <!-- This is the "overview" section that will be shown when the "Project Overview" link is clicked -->
+<h1>Project Overview:</h1>
+
+<h1>Project Phases:</h1>
+
+<h3>Planning and Design:</h3>
+<p>
+  Recognized the growing interest in gesture-controlled devices and identified an opportunity to develop a gesture-controlled RC car.<br>
+  Collaboratively brainstormed the project requirements and functionalities to ensure the successful implementation of a gesture-controlled RC car.<br>
+  Allocated tasks among team members based on their individual skills and expertise, fostering efficient collaboration throughout the project.
+</p>
+
+<h3>Hardware Assembly:</h3>
+<p>
+  Acquired essential components, including aluminium rods, H-bridge, servo motors for steering, and 2 DC motors for engine, to lay the foundation for the RC car.<br>
+  Meticulously constructed the car base using aluminium rods, ensuring a sturdy and durable framework for the subsequent assembly.<br>
+  Seamlessly integrated the H-bridge for motor control and meticulously attached servo motors for steering and DC motors for propulsion, ensuring precise control and smooth operation of the RC car.
+</p>
+
+<h3>Gesture Recognition Model Development:</h3>
+<p>
+  Gathered a diverse dataset for gesture recognition, encompassing a wide range of hand movements and gestures.<br>
+  Leveraged the powerful Edge Impulse platform to train a robust gesture recognition model, capable of accurately identifying and interpreting various hand gestures.<br>
+  Fine-tuned and optimized the model for embedded systems, ensuring efficient performance and low-power consumption on the ESP-EYE board.
+</p>
+
+<h3>Integration with ESP-EYE:</h3>
+<p>
+  Successfully embedded the trained gesture recognition model onto the ESP-EYE board, leveraging its capabilities for real-time gesture detection.<br>
+  Configured the ESP-EYE board to seamlessly capture and process hand gestures in real-time, laying the foundation for intuitive control of the RC car.
+</p>
+
+<h3>Communication Setup:</h3>
+<p>
+  Established a reliable communication channel between the ESP-EYE and ESP32 on the RC car, leveraging the ESP-NOW protocol for seamless communication.<br>
+  Implemented robust protocols for transmitting gesture commands from the ESP-EYE board to the RC car, ensuring accurate and responsive control in various operating conditions.
+</p>
+
+<h3>Testing and Debugging:</h3>
+<p>
+  Conducted rigorous testing of the entire system to validate functionality and reliability under real-world conditions.<br>
+  Identified and addressed hardware and software issues promptly, ensuring the smooth operation of the gesture-controlled RC car.<br>
+  Iteratively
+
+    <ul>
+        <li>This is a bulleted list item in the overview section.</li>
+        <li>You can add as many list items as you want to provide more information.</li>
+    </ul>
+</section>
+
+<section id="technik" style="display: none;">
+    <h1>Die Technik:</h1>
+    <p>This is the technology section, where you can add some text describing the technology used in the project.</p>
+    <p>You can add as many paragraphs as you want to provide more detail about the technology.</p>
+    <ul>
+        <li>This is a bulleted list item in the technology section.</li>
+        <li>You can add as many list items as you want to provide more information.</li>
+    </ul>
+</section>
+
+<section id="code" style="display: none;">
+    <h1>Der Code:</h1>
+    <p>This is the code section, where you can add some text describing the code used in the project.</p>
+    <p>You can add as many paragraphs as you want to provide more detail about the code.</p>
+    <ul>
+        <li>This is a bulleted list item in the code section.</li>
+        <li>You can add as many list items as you want to provide more information.</li>
+    </ul>
+</section>
+
+<section id="hindernisse" style="display: none;">
+    <h1>Hindernisse und Probleme:</h1>
+    <p>This is the obstacles and problems section, where you can add some text describing the obstacles and problems encountered during the project.</p>
+    <p>You can add as many paragraphs as you want to provide more detail about the obstacles and problems.</p>
+    <ul>
+        <li>This is a bulleted list item in the obstacles and problems section.</li>
+        <li>You can add as many list items as you want to provide more information.</li>
+    </ul>
+</section>
+
+<section id="resultat" style="display: none;">
+    <h1>Das Endergebnis:</h1>
+    <p>This is the result section, where you can add some text describing the result of the project.</p>
+    <p>You can add as many paragraphs as you want to provide more detail about the result.</p>
+    <ul>
+        <li>This is a bulleted list item in the result section.</li>
+        <li>You can add as many list items as you want to provide more information.</li>
+    </ul>
+</section>
+
+<script>
+function showContent(id) {
+    // Hide all sections
+    var sections = document.getElementsByTagName('section');
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+    }
+
+    // Show the selected section
+    var selectedSection = document.getElementById(id);
+    selectedSection.style.display = 'block';
+}
+
+// Show the "overview" section by default
+showContent('overview');
+</script>
+
+</body>
+</html>
